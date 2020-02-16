@@ -52,7 +52,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>..\..\Listing\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -433,11 +433,6 @@
           <GroupName>STM32F4xx_StdPeriph_Driver</GroupName>
           <Files>
             <File>
-              <FileName>STM32_LIB.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\Libraries\STM32F4xx_StdPeriph_Driver\STM32_LIB.lib</FilePath>
-            </File>
-            <File>
               <FileName>misc.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h</FilePath>
@@ -611,6 +606,11 @@
               <FileName>stm32f4xx_wwdg.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h</FilePath>
+            </File>
+            <File>
+              <FileName>STM32_LIB.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\STM32_LIB.lib</FilePath>
             </File>
           </Files>
         </Group>
