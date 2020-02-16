@@ -6,18 +6,18 @@
 //引脚定义
 /*******************************************************/
 //R 红色灯
-#define LED1_PIN                  GPIO_Pin_10                 
-#define LED1_GPIO_PORT            GPIOH                      
+#define LED1_PIN                  GPIO_Pin_10
+#define LED1_GPIO_PORT            GPIOH
 #define LED1_GPIO_CLK             RCC_AHB1Periph_GPIOH
 
 //G 绿色灯
-#define LED2_PIN                  GPIO_Pin_11                 
-#define LED2_GPIO_PORT            GPIOH                      
+#define LED2_PIN                  GPIO_Pin_11
+#define LED2_GPIO_PORT            GPIOH
 #define LED2_GPIO_CLK             RCC_AHB1Periph_GPIOH
 
 //B 蓝色灯
-#define LED3_PIN                  GPIO_Pin_12                 
-#define LED3_GPIO_PORT            GPIOH                       
+#define LED3_PIN                  GPIO_Pin_12
+#define LED3_GPIO_PORT            GPIOH
 #define LED3_GPIO_CLK             RCC_AHB1Periph_GPIOH
 /************************************************************/
 
@@ -44,7 +44,7 @@
 					GPIO_SetBits(LED3_GPIO_PORT,LED3_PIN);\
 					else		\
 					GPIO_ResetBits(LED3_GPIO_PORT,LED3_PIN)
-/*   //f429开发板实际并不存在这个LED4					
+/*   //f429开发板实际并不存在这个LED4
 #define LED4(a)	if (a)	\
 					GPIO_SetBits(LED4_GPIO_PORT,LED4_PIN);\
 					else		\
@@ -89,8 +89,8 @@
 					LED2_OFF;\
 					LED3_ON
 
-					
-//黄(红+绿)					
+
+//黄(红+绿)
 #define LED_YELLOW	\
 					LED1_ON;\
 					LED2_ON;\
@@ -106,18 +106,18 @@
 					LED1_OFF;\
 					LED2_ON;\
 					LED3_ON
-					
+
 //白(红+绿+蓝)
 #define LED_WHITE	\
 					LED1_ON;\
 					LED2_ON;\
 					LED3_ON
-					
+
 //黑(全部关闭)
 #define LED_RGBOFF	\
 					LED1_OFF;\
 					LED2_OFF;\
-					LED3_OFF		
+					LED3_OFF
 
 
 
