@@ -29,7 +29,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
-
+#include "./led/bsp_led.h"
+#include "./exti/bsp_exti.h"
 /** @addtogroup STM32F429I_DISCOVERY_Examples
   * @{
   */
@@ -147,8 +148,30 @@ void SysTick_Handler(void)
 
 /**
   * @}
-  */
+  */ 
+void KEY1_IRQHandler(void)
+{
+  //È·±£ÊÇ·ñ²úÉúÁËEXTI LineÖÐ¶Ï
+	if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET) 
+	{
+		// LED1 È¡·´		
+		LED1_TOGGLE;
+    //Çå³ýÖÐ¶Ï±êÖ¾Î»
+		EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);     
+	}  
+}
 
+void KEY2_IRQHandler(void)
+{
+  //È·±£ÊÇ·ñ²úÉúÁËEXTI LineÖÐ¶Ï
+	if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET) 
+	{
+		// LED2 È¡·´		
+		LED2_TOGGLE;
+    //Çå³ýÖÐ¶Ï±êÖ¾Î»
+		EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);     
+	}  
+}
 /**
   * @}
   */
