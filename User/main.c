@@ -20,13 +20,13 @@
 #include "./key/bsp_key.h"
 #include "./rcc/bsp_clkconfig.h"
 #include "./exti/bsp_exti.h"
-
+#include "./usart/bsp_debug_usart.h"
 void Delay(__IO u32 nCount);
 void LED_test11(void);
 void KEY_test12(void);
 void RCC_test15(void);
 void EXTI_test17(void);
-
+void UART_test18_1(void);
 /**
   * @brief  主函数
   * @param  无
@@ -41,7 +41,8 @@ int main(void)
     // LED_test11(); // 第11章的代码 
     // KEY_test12(); // 第12章的代码 
     // RCC_test15(); // 第15章的代码 
-    EXTI_test17(); // 第17章的代码 
+    //EXTI_test17(); // 第17章的代码 
+		UART_test18_1(); // 第18_1章的代码 
     return 0;
 
 }
@@ -156,7 +157,20 @@ void EXTI_test17(void)	 // KEY反转LED的代码
 	{
 	}
 }
-
+void UART_test18_1(void)	 // USART_USART1接发
+{
+  /*初始化USART 配置模式为 115200 8-N-1，中断接收*/
+    Debug_USART_Config();
+	
+	/* 发送一个字符串 */
+	Usart_SendString( DEBUG_USART,"这是一个串口中断接收回显实验\n");
+	// printf("这是一个串口中断接收回显实验\n");
+	
+    while(1)
+	{	
+		
+	}
+}
 void Delay(__IO uint32_t nCount)	 //简单的延时函数
 {
 	for(; nCount != 0; nCount--);
