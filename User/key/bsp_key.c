@@ -62,15 +62,16 @@ void Key_GPIO_Config(void)
   *		@arg KEY_ON:按键按下
   *		@arg KEY_OFF:按键没按下
   */
-uint8_t Key_Scan(GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin)
-{			
-	/*检测是否有按键按下 */
-	if(GPIO_ReadInputDataBit(GPIOx,GPIO_Pin) == KEY_ON ) {	 
-		/*等待按键释放 */
-		while(GPIO_ReadInputDataBit(GPIOx,GPIO_Pin) == KEY_ON);   
-		return 	KEY_ON;	 
-	}
-	else
-		return KEY_OFF;
+uint8_t Key_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
+{
+    /*检测是否有按键按下 */
+    if(GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON )
+    {
+        /*等待按键释放 */
+        while(GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON);
+        return 	KEY_ON;
+    }
+    else
+        return KEY_OFF;
 }
 /*********************************************END OF FILE**********************/
