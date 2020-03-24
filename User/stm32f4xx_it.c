@@ -152,10 +152,10 @@ void SysTick_Handler(void)
   */
 void KEY1_IRQHandler(void)
 {
-    //è·±￡ê?·?2úéúá?EXTI Line?D??
+    //è·±￡�??·?2úéúá?EXTI Line?D??
     if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET)
     {
-        // LED1 è?·′
+        // LED1 è?·�?
         LED1_TOGGLE;
         //??3y?D??±ê????
         EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);
@@ -164,10 +164,10 @@ void KEY1_IRQHandler(void)
 
 void KEY2_IRQHandler(void)
 {
-    //è·±￡ê?·?2úéúá?EXTI Line?D??
+    //è·±￡�??·?2úéúá?EXTI Line?D??
     if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET)
     {
-        // LED2 è?·′
+        // LED2 è?·�?
         LED2_TOGGLE;
         //??3y?D??±ê????
         EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);
@@ -179,8 +179,10 @@ void DEBUG_USART_IRQHandler(void)
     if(USART_GetITStatus(DEBUG_USART, USART_IT_RXNE) != RESET)
     {
         ucTemp = USART_ReceiveData( DEBUG_USART );
+
         USART_SendData(DEBUG_USART, ucTemp);
     }
+    // Usart_SendString( DEBUG_USART, "����:");
 }
 /**
   * @}

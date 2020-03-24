@@ -28,6 +28,7 @@
 /************************************************************/
 
 void Debug_USART_Config(void);
+void LED_USART_Config(void);
 void Usart_SendByte( USART_TypeDef *pUSARTx, uint8_t ch);
 void Usart_SendString( USART_TypeDef *pUSARTx, char *str);
 

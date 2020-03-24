@@ -652,6 +652,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_i2c_ee.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\i2c\bsp_i2c_ee.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
