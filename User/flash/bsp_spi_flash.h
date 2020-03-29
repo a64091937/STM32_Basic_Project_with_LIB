@@ -17,22 +17,22 @@
 
 /* Private define ------------------------------------------------------------*/
 /*命令定义-开头*******************************/
-#define W25X_WriteEnable		      0x06 
-#define W25X_WriteDisable		      0x04 
-#define W25X_ReadStatusReg		    0x05 
-#define W25X_WriteStatusReg		  0x01 
-#define W25X_ReadData			        0x03 
-#define W25X_FastReadData		      0x0B 
-#define W25X_FastReadDual		      0x3B 
-#define W25X_PageProgram		      0x02 
-#define W25X_BlockErase			      0xD8 
-#define W25X_SectorErase		      0x20 
-#define W25X_ChipErase			      0xC7 
-#define W25X_PowerDown			      0xB9 
-#define W25X_ReleasePowerDown	  0xAB 
-#define W25X_DeviceID			        0xAB 
-#define W25X_ManufactDeviceID   	0x90 
-#define W25X_JedecDeviceID		    0x9F 
+#define W25X_WriteEnable		      0x06
+#define W25X_WriteDisable		      0x04
+#define W25X_ReadStatusReg		    0x05
+#define W25X_WriteStatusReg		  0x01
+#define W25X_ReadData			        0x03
+#define W25X_FastReadData		      0x0B
+#define W25X_FastReadDual		      0x3B
+#define W25X_PageProgram		      0x02
+#define W25X_BlockErase			      0xD8
+#define W25X_SectorErase		      0x20
+#define W25X_ChipErase			      0xC7
+#define W25X_PowerDown			      0xB9
+#define W25X_ReleasePowerDown	  0xAB
+#define W25X_DeviceID			        0xAB
+#define W25X_ManufactDeviceID   	0x90
+#define W25X_JedecDeviceID		    0x9F
 
 #define WIP_Flag                  0x01  /* Write In Progress (WIP) flag */
 #define Dummy_Byte                0xFF
@@ -44,26 +44,26 @@
 #define FLASH_SPI_CLK                       RCC_APB2Periph_SPI5
 #define FLASH_SPI_CLK_INIT                  RCC_APB2PeriphClockCmd
 
-#define FLASH_SPI_SCK_PIN                   GPIO_Pin_7                  
-#define FLASH_SPI_SCK_GPIO_PORT             GPIOF                       
+#define FLASH_SPI_SCK_PIN                   GPIO_Pin_7
+#define FLASH_SPI_SCK_GPIO_PORT             GPIOF
 #define FLASH_SPI_SCK_GPIO_CLK              RCC_AHB1Periph_GPIOF
 #define FLASH_SPI_SCK_PINSOURCE             GPIO_PinSource7
 #define FLASH_SPI_SCK_AF                    GPIO_AF_SPI5
 
-#define FLASH_SPI_MISO_PIN                  GPIO_Pin_8                
-#define FLASH_SPI_MISO_GPIO_PORT            GPIOF                   
+#define FLASH_SPI_MISO_PIN                  GPIO_Pin_8
+#define FLASH_SPI_MISO_GPIO_PORT            GPIOF
 #define FLASH_SPI_MISO_GPIO_CLK             RCC_AHB1Periph_GPIOF
 #define FLASH_SPI_MISO_PINSOURCE            GPIO_PinSource8
 #define FLASH_SPI_MISO_AF                   GPIO_AF_SPI5
 
-#define FLASH_SPI_MOSI_PIN                  GPIO_Pin_9                
-#define FLASH_SPI_MOSI_GPIO_PORT            GPIOF                      
+#define FLASH_SPI_MOSI_PIN                  GPIO_Pin_9
+#define FLASH_SPI_MOSI_GPIO_PORT            GPIOF
 #define FLASH_SPI_MOSI_GPIO_CLK             RCC_AHB1Periph_GPIOF
 #define FLASH_SPI_MOSI_PINSOURCE            GPIO_PinSource9
 #define FLASH_SPI_MOSI_AF                   GPIO_AF_SPI5
 
-#define FLASH_CS_PIN                        GPIO_Pin_6               
-#define FLASH_CS_GPIO_PORT                  GPIOF                     
+#define FLASH_CS_PIN                        GPIO_Pin_6
+#define FLASH_CS_GPIO_PORT                  GPIOF
 #define FLASH_CS_GPIO_CLK                   RCC_AHB1Periph_GPIOF
 
 #define SPI_FLASH_CS_LOW()      {FLASH_CS_GPIO_PORT->BSRRH=FLASH_CS_PIN;}
@@ -89,9 +89,9 @@
 void SPI_FLASH_Init(void);
 void SPI_FLASH_SectorErase(u32 SectorAddr);
 void SPI_FLASH_BulkErase(void);
-void SPI_FLASH_PageWrite(u8* pBuffer, u32 WriteAddr, u16 NumByteToWrite);
-void SPI_FLASH_BufferWrite(u8* pBuffer, u32 WriteAddr, u16 NumByteToWrite);
-void SPI_FLASH_BufferRead(u8* pBuffer, u32 ReadAddr, u16 NumByteToRead);
+void SPI_FLASH_PageWrite(u8 *pBuffer, u32 WriteAddr, u16 NumByteToWrite);
+void SPI_FLASH_BufferWrite(u8 *pBuffer, u32 WriteAddr, u16 NumByteToWrite);
+void SPI_FLASH_BufferRead(u8 *pBuffer, u32 ReadAddr, u16 NumByteToRead);
 u32 SPI_FLASH_ReadID(void);
 u32 SPI_FLASH_ReadDeviceID(void);
 void SPI_FLASH_StartReadSequence(u32 ReadAddr);

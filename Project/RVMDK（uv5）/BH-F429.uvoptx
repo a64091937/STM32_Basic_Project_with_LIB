@@ -726,7 +726,7 @@
       <GroupNumber>4</GroupNumber>
       <FileNumber>39</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
@@ -826,6 +826,19 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>47</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\flash\bsp_spi_flash.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_spi_flash.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -834,6 +847,53 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
+  </Group>
+
+  <Group>
+    <GroupName>FATFS</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>48</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\FATFS\diskio.c</PathWithFileName>
+      <FilenameWithoutPath>diskio.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>49</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\FATFS\ff.c</PathWithFileName>
+      <FilenameWithoutPath>ff.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>50</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\FATFS\option\cc936.c</PathWithFileName>
+      <FilenameWithoutPath>cc936.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
 </ProjectOpt>

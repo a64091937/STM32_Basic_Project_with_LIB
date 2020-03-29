@@ -25,7 +25,7 @@
 /   3: f_lseek() function is removed in addition to 2. */
 
 
-#define	_USE_STRFUNC	0
+#define	_USE_STRFUNC	1
 /* This option switches string functions, f_gets(), f_putc(), f_puts() and
 /  f_printf().
 /
@@ -210,7 +210,7 @@
 /  defined by _NORTC_MON, _NORTC_MDAY and _NORTC_YEAR.
 /  When timestamp feature is enabled (_FS_NORTC == 0), get_fattime() function need
 /  to be added to the project to read current time form RTC. _NORTC_MON,
-/  _NORTC_MDAY and _NORTC_YEAR have no effect. 
+/  _NORTC_MDAY and _NORTC_YEAR have no effect.
 /  These options have no effect at read-only configuration (_FS_READONLY == 1). */
 
 

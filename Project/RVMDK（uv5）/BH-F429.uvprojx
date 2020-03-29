@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F429_439xx,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\CMSIS\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\..\Libraries\CMSIS\Include;..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\..\User;..\..\User\FATFS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -657,10 +657,35 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\i2c\bsp_i2c_ee.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_spi_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\flash\bsp_spi_flash.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DOC</GroupName>
+        </Group>
+        <Group>
+          <GroupName>FATFS</GroupName>
+          <Files>
+            <File>
+              <FileName>diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\FATFS\diskio.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\FATFS\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>cc936.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\FATFS\option\cc936.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
